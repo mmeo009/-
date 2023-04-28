@@ -20,5 +20,12 @@ public class MonsterController : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if(transform.position.y <= -5)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
 }

@@ -339,6 +339,7 @@ MonoBehaviour:
   moveSpeed: 5
   PlayerPivot: {fileID: 2059321529}
   projectileController: {fileID: 1054210836}
+  player_hp: 20
 --- !u!1 &669640339
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2623278532122852182, guid: a4729270235a9134f8dfab574c598272, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3922205
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: 2623278532122852182, guid: a4729270235a9134f8dfab574c598272, type: 3}
       propertyPath: m_LocalPosition.y

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     // 이동방향 벡터 값 선언
     public ProjectileController projectileController;
     //발사컨트롤 클래스 접근
+    public float player_hp = 20;
 
 
 
@@ -23,8 +24,19 @@ public class PlayerController : MonoBehaviour
         viewCamera = Camera.main;
         // 주로 사용하는 카메라 입력
     }
+    public void Player_Damaged(int damage)
+    //데미지 받는 함수 (함수 int)
+    {
+        player_hp -= damage;
 
-    // Update is called once per frame
+        if (player_hp <= 0)
+        {
+            GameObject temp = this.gameObject;
+            Destroy(temp);
+        }
+
+    }
+
     void Update()
     {       
         Vector3 mousePos = viewCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, viewCamera.transform.position.y));
